@@ -1,0 +1,160 @@
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: #F0D2FC;
+}
+
+.bg-1 {
+    color: #ffffff;
+    background-color: #C04BF2;
+}
+.bg-2 {
+    color: #ffffff;
+    background-color: #9F2CBF;
+}
+.bg-3 {
+    color: #ffffff;
+    background-color: #73168C;
+}
+.bg-4 {
+    color: #ffffff;
+    background-color: #281259;
+}
+
+.bg-5 {
+    color: #ffffff;
+    background-color: #070927;
+}
+
+.h1-locad{
+    font-size: 5rem;
+    padding: 5% 5% 10% 5%;
+    margin: 20%;
+}
+
+@media screen and (max-width: 760px) {
+    .h1-locad{
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .h1-locad{
+        font-size: 2rem;
+    }
+}
+
+.text-2{
+    color: #9F2CBF;
+}
+
+.bg-glass {
+    background: rgba(7, 9, 38, 0.8);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-width: 2px;
+    border-color: #9F2CBF;
+}
+
+.bg-glass:focus {
+    background: rgba(7, 9, 38, 0.8);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-width: 2px;
+    border-color: #9F2CBF;
+    color: #9F2CBF;
+}
+
+.btn-glass{
+    background: rgba(7, 9, 38, 0.8);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-width: 2px;
+    border-color: #9F2CBF;
+    color: #9F2CBF;
+    padding: 0.5% 40%;
+}
+
+.btn-glass:hover{
+    background: #9F2CBF;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-width: 2px;
+    border-color: #9F2CBF;
+    color: #070927;
+    padding: 0.5% 40%;
+}
+
+.bg-image{
+    background: url(../img/bg_sign.svg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.start-25 {
+    left: 35% !important;
+}
+
+.mb-6 {
+    margin-bottom: 5rem;
+}
+
+.bs-0{
+    box-shadow: none !important;
+}
+
+.ms-0{
+    margin-bottom: 0%;
+}
+
+.pb-0{
+    padding-bottom: 0;
+}
+
+.svg-a{
+    display: inline-block;
+    width: 6%;
+    margin: 0% 12% 16px 12%;
+}
+
+svg:hover path{
+    stroke: #9F2CBF;
+    stroke-width: 4%;
+    stroke-dashoffset: 25%;
+    fill: #070927;
+}
+
+#checkbox{
+    background-color: #070927;
+    border-width: 1px;
+    border-color: #9F2CBF;
+    border-radius: 16px;
+}
+
+#checkbox:checked{
+    background-color: #9F2CBF;
+    border-width: 1px;
+    border-color: #9F2CBF;
+    border-radius: 16px;
+}
+
+.fs-foot{
+    font-size: smaller;
+    margin: 4%;
+}
+
+::placeholder{
+    color: #9F2CBF !important;
+}
