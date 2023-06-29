@@ -1,65 +1,210 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap-reboot.css">
     <link rel="stylesheet" href="css/bootstrap-grid.css">
     <link rel="stylesheet" href="css/bootstrap-utilities.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/code.js"></script>
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.295/build/spline-viewer.js"></script>
-    <title>Login</title>
+
+    <!--Icones-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"> 
+        
+    <!--Favicon-->
+    <link rel="shortcut icon" href="img/001padrao.png" type="image/x-icon">
+    <script src="js/code.js" defer></script>
+    <title>Dicenders - Rede de comunidades e mesa virtual de RPG</title>
 </head>
-<body class="bg-4 bg-image">
-    
-    <div class="container">
-            <div class="position-absolute top-50 start-50 translate-middle" style="width: 30%;">
-                <div class="card bg-glass text-2 mb-3 text-center" >
-                    <div class="card-body pb-0">
-                        <h1 class="mt-6 mb-6 h1-locad">Login</h1>
-                        <form>
-                            <div class="mb-6">
-                            <input type="email" class="form-control bg-glass text-2 bs-0" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
-                            </div>
-                            <div class="mb-3">
-                            <input type="password" class="form-control bg-glass text-2 bs-0" id="exampleInputPassword1" placeholder="Senha">
-                            </div>
-                            <div class="mb-2 form-check text-start">
-                            <input type="checkbox" class="form-check-input bs-0" id="checkbox">
-                            <label class="form-check-label" for="exampleCheck1">Lembre-se de mim</label>
-                            </div>
-                            <div class="svg-a" name="twittericon">
-                                <?xml version="1.0" encoding="utf-8"?>
-                                    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-                                    <svg width="30" height="30" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.02601 15C11.0636 15 14.3673 9.99705 14.3673 5.66585C14.3673 5.5251 14.3673 5.38435 14.3609 5.2436C15.0012 4.78297 15.5582 4.20079 16 3.54183C15.411 3.80413 14.7771 3.97687 14.1112 4.06004C14.7899 3.65699 15.3085 3.01083 15.5582 2.24311C14.9244 2.62057 14.2201 2.88927 13.471 3.03642C12.8691 2.39665 12.0176 2 11.0764 2C9.26451 2 7.79192 3.47146 7.79192 5.28199C7.79192 5.53789 7.82393 5.7874 7.87515 6.03051C5.14766 5.89616 2.72749 4.58465 1.10764 2.60138C0.825931 3.0876 0.665866 3.65059 0.665866 4.25197C0.665866 5.39075 1.2485 6.39518 2.12565 6.98376C1.58784 6.96457 1.08203 6.81742 0.640256 6.57431C0.640256 6.58711 0.640256 6.5999 0.640256 6.61909C0.640256 8.20571 1.77351 9.53642 3.27171 9.83711C2.9964 9.91388 2.70828 9.95226 2.40736 9.95226C2.19608 9.95226 1.9912 9.93307 1.79272 9.89469C2.20888 11.1998 3.42537 12.1467 4.85954 12.1722C3.73269 13.0551 2.31773 13.5797 0.781113 13.5797C0.518608 13.5797 0.256102 13.5669 0 13.5349C1.44698 14.4562 3.17567 15 5.02601 15Z" fill="#9F2CBF"/>
-                                    </svg>
-                            </div>
-                            <div class="svg-a" name="googleicon">
-                                <?xml version="1.0" encoding="utf-8"?>
-                                    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-                                    <svg width="30" height="30" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15.5453 6.55847C15.6394 7.09345 15.6835 7.64019 15.6835 8.18399C15.6835 10.6179 14.8134 12.6755 13.2996 14.0688H13.3025C11.9768 15.2916 10.1573 16 7.99973 16C4.97503 16 2.209 14.2951 0.850974 11.5938C-0.283656 9.33331 -0.283659 6.67017 0.850972 4.40972C2.209 1.70542 4.97503 0.000539093 7.99973 0.000539093C9.98681 -0.0229766 11.9063 0.723645 13.3525 2.08167L11.0685 4.36563C10.2425 3.57786 9.14024 3.1487 7.99973 3.16633C5.91272 3.16633 4.14022 4.57433 3.50824 6.47028C3.17314 7.46382 3.17314 8.53966 3.50824 9.5332H3.51118C4.1461 11.4262 5.91566 12.8342 8.00267 12.8342C9.08145 12.8342 10.0074 12.5579 10.7246 12.0699H10.7217C11.5653 11.5115 12.1414 10.6326 12.3207 9.63902H7.99973V6.55847H15.5453Z" fill="#9F2CBF"/>
-                                    </svg>
-                            </div>
-                            <div class=" mb-3">
-                            <button type="submit" class="btn btn-primary btn-glass ">Sign in</button>
-                            </div>
-                            <div class="mt-2 mb-2">
-                                <p class="fs-6 text-light">Não tem uma conta? <a href="#" class="text-2">Cadastre-se</a></p>
-                            </div>
-                            <div class="mb-0">
-                                <a href="#" class="text-2 fs-foot">Termos de uso</a>
-                                <a href="#" class="text-2 fs-foot">Privacidade</a>
-                                <a href="#" class="text-2 fs-foot">Fale conosco</a>
-                            </div>
-                        </form>
-                    </div>
-                  </div>
-            </div>
+<body class="bg-5 oswald-font" theme-dicender=default>
+  <nav class="navbar fw-300 navbar-expand-lg bg-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="img/001.svg" class="logo" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><p class="text-clean fs-5 m-2 fw-500">Social</p></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><p class="text-clean fs-5 m-2 fw-500">Notificações</p></a>
+          </li>
+
+          <li class="nav-item dropdown m-2">
+            <a href="cadastro.php">
+            <div class="bg-5 profile row mx-0 rounded-5 container">
+                <button type="submit" class="btn text-2">Cadastre-se</button>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
+</nav>
+
+      <section class="bg-image">
+        <div class="bg-glass" style="border-radius: 0;">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-6 my-5">
+                      <h1 class="text-center text-2 fw-400 h1-index my-5">Dicenders</h1>
+                      <br>
+                      <div class="mx-6 p-5 mt-3 ms-0">
+                          <p class="fw-500 text-dm" style="text-align: justify; line-height: 30px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae impedit dicta deleniti quia quaerat. Libero provident dignissimos eaque recusandae hic possimus excepturi commodi eveniet magnam sit asperiores nobis eligendi quae doloremque aperiam voluptas a numquam, totam eum iusto? Consectetur, ut.</p>
+                      </div>
+                  </div>
+                  <div class="col-md-6 my-5">
+                      <img src="img/logofundo.png" class="align-image mb-6" style="opacity: 70%; filter: blur(2px); backdrop-filter: blur(1.5px); width: 50%;" alt="...">
+                      <div class="ms-0">
+                        <a href="cadastro.php">
+                          <button type="submit" class="btn btn-primary btn-white w-50 align-center">Cadastre-se</button>
+                        </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </section>
+      <section class="container-fluid">
+        <div class="m-5">
+            <h1 class="text-center text-transition text-clean my-5 fw-600">Algumas funções que nos tornam a melhor mesa para você:</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 my-5">
+                    <img src="img/i_img_1.svg" width="100%" class="align-image" alt="...">
+                </div>
+                <div class="col-md-6 fw-400 my-5">
+                    <div class="mx-5 align-center position-relative" style="top:25%;">
+                        <p class="text-transition text-clean" style="text-align: center;">Faça parte das suas comunidades <b class="text-2">favoritas</b> dentro de uma rede social <b class="text-2">exclusiva</b>.</p>
+                    </div>
+                    <div class="align-center position-relative" style="top:25%;">
+                      <a href="cadastro.php">
+                        <button type="submit" class="btn btn-primary btn-glass align-center w-50" style="width: 75%;">Cadastre-se</button>
+                      </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      <section class="container-fluid bg-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 fw-400 my-5">
+                <div class="mx-5 align-center position-relative" style="top:25%;">
+                    <p class="text-transition text-clean" style="text-align: center;">Coordene <b class="text-2">suas mesas</b> e fique por dentro das postagens <b class="text-2">mais relevantes</b> para você.</p>
+                </div>
+                <div class="align-center position-relative" style="top:25%;">
+                  <a href="cadastro.php">
+                    <button type="submit" class="btn btn-primary btn-white align-center w-50" style="width: 75%;">Cadastre-se</button>
+                  </a>
+                </div>
+            </div>
+            <div class="col-md-6 my-5">
+                <img src="img/i_img_2.svg" width="100%" class="align-image" alt="...">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container-fluid">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6 my-5">
+                  <img src="img/i_img_3.svg" width="100%" class="align-image" alt="...">
+              </div>
+              <div class="col-md-6 fw-400 my-5">
+                  <div class="mx-5 align-center position-relative" style="top:25%;">
+                      <p class="text-transition text-clean" style="text-align: center;"><b class="text-2"> Compartilhe dicas</b> com seus amigos e conheça <b class="text-2">novos jogadores</b> para sua campanha.</p>
+                  </div>
+                  <div class="align-center position-relative" style="top:25%;">
+                    <a href="cadastro.php">
+                      <button type="submit" class="btn btn-primary btn-glass align-center w-50" style="width: 75%;">Cadastre-se</button>
+                    </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </section>
+      <section class="container-fluid bg-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 fw-400 my-5">
+                <div class="mx-6 align-center position-relative" style="top:25%;">
+                    <p class="text-transition text-clean" style="text-align: center;">Use a <b class="text-2"> imaginação</b> e as muitas <b class="text-2">ferramentas a seu dispor</b> para criar <b class="text-2">campanhas incriveis</b>.</p>
+                </div>
+                <div class="align-center position-relative" style="top:25%;">
+                  <a href="cadastro.php">
+                    <button type="submit" class="btn btn-primary btn-white align-center w-50" style="width: 75%;">Cadastre-se</button>
+                  </a>
+                </div>
+            </div>
+            <div class="col-md-6 my-5">
+                <img src="img/i_img_4.svg" width="100%" class="align-image" alt="...">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container-fluid">
+        <div class="container">
+          <div class="row my-5">
+            <div class="col-md-5 fw-400 my-5">
+              <div class="card bg-card-lend card-lend text-clean p-2 mx-3 position-relative align-center" style="width: 18rem;">
+                <div class="card-body  position-absolute top-10">
+                  <h5 class="card-title fs-4 text-center">Crie uma conta gratuita</h5>
+                  <i class="bi-people card-text text-2 align-image fs-1 my-3"></i>
+                  <i class="inner-icon"></i>
+                  <p class="card-text text-clean fs-5 text-center">e convide os seus amigos para se divertirem juntos.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 fw-400 my-5">
+              <div class="mx-6 align-center position-relative" style="top:25%;">
+                <p class="text-transition" style="text-align: center;">ou</p>
+              </div>
+            </div>
+            <div class="col-md-5 my-5">
+              <div class="card bg-card-lend card-lend text-clean p-0 mx-3 position-relative align-center" style="width: 18rem;">
+                <div class="card-body p-4 position-absolute top-5">
+                  <h5 class="card-title fs-4 text-center">Assine o plano pago</h5>
+                  <i class="bi-coin card-text text-2 align-image fs-1 my-3"></i>
+                  <i class="inner-icon"></i>
+                  <p class="card-text text-clean fs-5 text-center">e ganhe previlégios que deixarão o jogo mais divertido.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-image">
+        <div class="container-fluid bg-glass">
+            <div class="row">
+                <div class="col-md-4 my-5">
+
+                </div>
+                <div class="col-md-4 my-5 position-relative">
+                    <p class="card-text text-clean fw-600 login text-center dice-border position-relative" style="z-index: 2; top: 40%;">Jogue com Dicenders®</p>
+                    <img src="img/logofundo.png" class="align-image mb-6" style="opacity: 70%; filter: blur(2px); backdrop-filter: blur(1.5px); width: 50%;" alt="...">
+                    <div class="ms-0">
+                      <a href="cadastro.php">
+                        <button type="submit" class="btn btn-primary btn-white w-50 align-center">Cadastre-se</button>
+                      </a>
+                    </div>
+                </div>
+                <div class="col-md-4 my-5">
+
+              </div>
+            </div>
+        </div>
+      </section>
+
+      <footer></footer>
 </body>
 </html>
